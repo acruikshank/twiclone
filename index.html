@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Not-Twitter</title>
+    <style>
+        .input {
+            transform: scale(2);
+            transform-origin: top left;
+            opacity: .95;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="input">
+        tweet
+        <input placeholder="tweet"><button>tweet</button>
+    </div>
+<script>
+    for (let i=0; i<10; i++) {
+        let nd = document.body.querySelector('.input')
+        let cln = nd.cloneNode()
+        cln.innerHTML = nd.innerHTML
+        document.body.appendChild(cln)
+        cln.appendChild(nd)
+    }
+</script>
 </body>
 </html>
